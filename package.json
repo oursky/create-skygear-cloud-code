@@ -25,5 +25,8 @@
     "require-dir": "1.1.0",
     "tslint": "5.11.0",
     "typescript": "3.1.6"
+  },
+  "dependencies": {
+    "commander": "2.19.0"
   }
 }
