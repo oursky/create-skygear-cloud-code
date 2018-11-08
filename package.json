@@ -1,0 +1,7 @@
+{
+  "name": "create-skygear-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "YinYin Chiu <cychiuae@connect.ust.hk>",
+  "license": "MIT"
+}
