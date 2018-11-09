@@ -1,5 +1,7 @@
 import { CommanderStatic } from "commander";
-import { validateProjectName } from "src/validation";
+
+import { validateProjectName } from "../validation";
+import generateSkygearServer, { Template } from "../generator";
 
 export function registerCommand(program: CommanderStatic) {
   program
@@ -15,6 +17,6 @@ export function registerCommand(program: CommanderStatic) {
         return;
       }
 
-      console.log("Init a skygear server");
+      generateSkygearServer(projectName, Template.Python);
     });
 }
