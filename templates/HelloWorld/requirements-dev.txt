@@ -1,0 +1,15 @@
+alembic==1.0.2
+atomicwrites==1.1.5
+attrs==18.1.0
+mccabe==0.6.1
+more-itertools==4.2.0
+pluggy==0.6.0
+py==1.5.3
+psycopg2-binary==2.7.5
+pycodestyle==2.4.0
+pydocstyle==2.1.1
+pyflakes==2.0.0
+pylama==7.4.3
+pytest==3.6.1
+six==1.11.0
+snowballstemmer==1.2.1

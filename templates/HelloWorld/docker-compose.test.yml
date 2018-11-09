@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  test-skygear-server:
+    image: quay.io/skygeario/skygear-server:v1.6.2
+    restart: always
+    depends_on:
+      - test-postgres
+    command: skygear-server --http
+    env_file:
+      - ./test.env
+    volumes:
+      - app_data:/app/data
+  test-skygear-plugin:
+    image: helloworld/skygear-plugin
+    build: .
+    env_file:
+      - ./test.env
+  test-postgres:
+    image: mdillon/postgis:9.5
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
+    driver: local
+  app_data:
+    driver: local

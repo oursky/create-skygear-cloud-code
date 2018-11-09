@@ -18,7 +18,6 @@ export function copyAndReplace(
   destPath: string,
   replacements: { [key: string]: string } = {}
 ) {
-  console.log(srcPath, destPath);
   if (fs.lstatSync(srcPath).isDirectory()) {
     if (!fs.existsSync(destPath)) {
       fs.mkdirSync(destPath);
