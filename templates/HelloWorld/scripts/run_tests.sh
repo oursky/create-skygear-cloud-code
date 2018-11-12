@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/sh -e
 
 docker_compose() {
   docker-compose -f docker-compose.test.yml "$@"
@@ -17,4 +17,4 @@ echo 'sleep 10'
 sleep 10
 
 docker_compose run --rm test-skygear-plugin pytest
-docker_compose stop
+docker_compose down
