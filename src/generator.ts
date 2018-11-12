@@ -1,13 +1,10 @@
 import * as path from "path";
 
 import { listAllFiles, copyAndReplace } from "./utils";
-
-export enum Template {
-  Python = "HelloWorld",
-}
+import { Template } from "./template";
 
 function resolveTemplateFilePath(template: Template): string {
-  return `${path.resolve(__dirname, "../templates", template)}`;
+  return `${path.resolve(__dirname, "../templates", template.name)}`;
 }
 
 export default function generateSkygearServer(
