@@ -25,4 +25,5 @@ function makeDotFile(templateName: string, realName: string): DotFile {
 export const PythonTemplate = makeTemplate("HelloWorld", [
   makeDotFile("_gitignore", ".gitignore"),
   makeDotFile("_skyignore", ".skyignore"),
+  makeDotFile("_travis.yml", ".travis.yml"),
 ]);

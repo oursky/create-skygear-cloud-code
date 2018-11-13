@@ -1,0 +1,26 @@
+sudo: required
+language: python
+python: 3.6
+services:
+  - docker
+env:
+  - TRAVIS_NODE_VERSION="10"
+script:
+  - make run-ci
+  - make run-tests
+before_deploy:
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - npm install -g skycli
+deploy:
+  - provider: script
+    script: env DATABASE_URL="$DEV_DATABASE_URL" APP_SCHEMA="app_helloworld_dev" ENV="dev" SKYCLI_ENV="staging" scripts/deploy.sh
+    on:
+      branch: master
+  - provider: script
+    script: env DATABASE_URL="$STAGING_DATABASE_URL" APP_SCHEMA="app_helloworld_staging" ENV="staging" SKYCLI_ENV="staging" scripts/deploy.sh
+    on:
+      branch: staging
+  - provider: script
+    script: env DATABASE_URL="$PRODUCTION_DATABASE_URL" APP_SCHEMA="app_helloworld" ENV="production" SKYCLI_ENV="production" scripts/deploy.sh
+    on:
+      branch: production
