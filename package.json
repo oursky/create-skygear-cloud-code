@@ -1,6 +1,6 @@
 {
   "name": "create-skygear-server",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "bin": {
     "create-skygear-server": "./bin/index.js"
   },
