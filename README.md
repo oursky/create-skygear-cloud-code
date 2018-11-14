@@ -1,6 +1,6 @@
-# Create Skygear server
+# Create Skygear cloud code
 
-Scaffolding skygear server side
+Scaffolding skygear cloud code
 
 ## Usage
 ### Prerequisites
@@ -8,11 +8,11 @@ Scaffolding skygear server side
 2. Add enviroment variables DEV_DATABASE_URL / STAGING_DATABASE_URL / PRODUCTION_DATABASE_URL in travis
 
 ```
-$ npm install -g create-skygear-server
+$ npm install -g create-skygear-cloud-code
 or
-$ yarn global add create-skygear-server
+$ yarn global add create-skygear-cloud-code
 
-$ create-skygear-server init <YourProjectName>
+$ create-skygear-cloud-code init <YourProjectName>
 ```
 
 ## Contribution
