@@ -17,6 +17,9 @@ $ create-skygear-cloud-code init <YourProjectName>
 
 ## Contribution
 
+### Inspired by
+* react-native-cli
+
 ### Dev dependencies
 * Node 8.x.x
 * Yarn 1.9.4
