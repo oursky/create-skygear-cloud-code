@@ -5,12 +5,12 @@ cache:
 env:
   - secure: "Hqvp1ZNf6Llw4eXo9lQy033FzHcOLN7/7wX+heXwHkpPdKscwmg5QFfiJ5gtC6701oTxwKyCB9fnofSjyFzX7XqK8OHyfM61INaa0j3+rT4IspyVLrVs+nGbTEHTBoRIyZ677jUZdxP0qd9dEBaD6PI/8Q9xtviROmzBGpjrBGqcRfrGBfx63USRv8eVVKwbJNBbjVhs3JGy7S0nNjq0z/QCaU//9XVRC7K8q0LwDGvB1sqvYObrXOhjz3jCCbv1bqqN3kvaE3S0ggAFGmH10nVtVwnAp+CGygnxAUTfvT8daLhQrO3djQxLHTGbL/m8LVmjpiqfd1RhNVDsN4MgHQxyXnaE8f1V9eULanZ8+WbDZQn1/tevJ3Q6nC4UFThTSLOym5CrAWhm672TkAqNKKXPXSrd7C+CxRuIV5Ky7U8vnngiWuJkT5OFLD09InGghyhhp64Gsx1sWGORMVP7ciuYw1tw+Lp/u0od5cR+vty1deB5Xy/90R37AxA5W5mXZKYvSyvY+M1zZpqkb85bvwqeHEYdLHjRngLf/V8Fat70ZkwPuzkSrAV+/pVZaoFF9cstKMihJaGbpZvQ+LZkkqqESGPJqTh0K+S4Ms1Nx9A3RcD71pD2cActMIsC0sGp3nlgVCM6jPEaUiepiZioNbPDa5aW+9cQo4XY3Ibxgh8="
 node_js: "10"
-  before_install:
-    - npm i -g yarn
-  install:
-    - yarn
-  script:
-    - yarn ci-check
+before_install:
+  - npm i -g yarn
+install:
+  - yarn
+script:
+  - yarn ci-check
 before_deploy:
   - yarn build
 deploy:
