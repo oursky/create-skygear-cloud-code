@@ -14,7 +14,7 @@
     "watch": "gulp watch"
   },
   "author": "YinYin Chiu <cychiuae@connect.ust.hk>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@types/node": "10.12.3",
     "gulp": "4.0.0",
