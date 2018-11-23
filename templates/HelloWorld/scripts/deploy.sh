@@ -2,7 +2,7 @@
 
 set -e
 
-APP_SCHEMA="$APP_SCHEMA" DATABASE_URL="$DATABASE_URL" alembic upgrade head
+docker-compose run -e SCHEMA_NAME="$APP_SCHEMA" -e DATABASE_URL="$DATABASE_URL" --rm skygear-plugin alembic upgrade head
 
 rm -rf "$HOME/.skycli"
 rm -f skygear.json
