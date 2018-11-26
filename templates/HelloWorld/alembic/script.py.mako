@@ -8,7 +8,8 @@ Create Date: ${create_date}
 from alembic import op
 import sqlalchemy as sa
 ${imports if imports else ""}
-
+import sys
+sys.path.append('/usr/src/app/alembic') # noqa
 from skygear_helper import SCHEMA_NAME
 
 # revision identifiers, used by Alembic.

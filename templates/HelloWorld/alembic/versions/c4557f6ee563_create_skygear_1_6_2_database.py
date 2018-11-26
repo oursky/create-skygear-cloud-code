@@ -7,7 +7,8 @@ Create Date: 2018-11-09 17:35:40.010974
 """
 from alembic import op
 import sqlalchemy as sa
-
+import sys
+sys.path.append('/usr/src/app/alembic') # noqa
 
 from skygear_helper import SCHEMA_NAME
 
